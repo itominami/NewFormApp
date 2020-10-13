@@ -36,129 +36,22 @@ __問い合わせフォーム__ をイメージしたサンプルアプリを通
 ]
 ]
 
-## Monacaでプロジェクトを作る
-* `最小限のテンプレート` を選択
+## Onsen UI
+モバイルアプリに特化した、ネイティブのようなパフォーマンスに優れたUIコンポーネントの集まりです。
+すべてのコンポーネントでiOSとAndroidマテリアルデザインに対応し、実行する端末にあわせて自動的にスタイルを切り替えます。
 
-.center[<img src="document-img/minimum.png" alt="Monaca_1" width="600px">]
+OnsenUI特有のコードはありますが、基本的にコピペでOKです🙌
+本日のサンプルアプリはOnsen UIを使用して開発しているのでチーム開発の際にOnsen uiを使用する方は参考にしてみてください。
 
----
-.footnote_right[
-.right[
-Monacaでプロジェクトを作る
-]
-]
+<a href="https://ja.onsen.io/theme-roller/" target="_blank">https://ja.onsen.io/theme-roller/</a>
 
-### プロジェクト作成
-* プロジェクト名 `TestApp`
-.center[<img src="document-img/project1.png" alt="Monaca_1" width="600px">]
+
+.center[<img src="document-img/onsenUI.png" alt="app_image.png" width="750px">]
 
 ---
 .footnote_right[
-.right[
-Monacaでプロジェクトを作る
+はじめに
 ]
-]
-
-### プロジェクトの開き方
-* `クラウドIDEで開く`から開く
-.center[<img src="document-img/project2.png" alt="Monaca_1" width="600px">]
-
----
-.footnote_right[
-.right[
-Monacaでプロジェクトを作る
-]
-]
-
-### 参考：SDKとは
-.center[<img src="document-img/SDK.png" alt="Monaca_1" width="700px">]
-
----
-.footnote_right[
-.right[
-Monacaでプロジェクトを作る
-]
-]
-
-## 1.3. Monaca で mobile backend を利用するための準備
-### JavaScript SDK のインポート
-* Monaca を開きます
-* `設定` ＞ `JS/CSSコンポーネントの追加と削除` をクリックます
-* 右上の「 `コンポーネント名` 」に「 `ncmb` 」と入力して検索します
-
-.center[<img src="document-img/add_js_sdk_1.png" alt="add_js_sdk_1" width="700px">]
-
----
-.footnote_right[
-.right[
-ハンズオン<br>1.3. Monaca で mobile backend を利用するための準備
-]
-]
-
-### JavaScript SDK のインポート
-* 追加をクリックします
-
-.center[<img src="document-img/add_js_sdk_2.png" alt="add_js_sdk_2" width="600px">]
-
-* バージョンは最新（デフォルト）のまま `インストール` をクリックします
-* チェックを入れ `保存する` をクリックします
-
-.center[<img src="document-img/add_js_sdk_3.png" alt="add_js_sdk_3" width="600px">]
-
----
-.footnote_right[
-.right[
-ハンズオン<br>1.3. Monaca で mobile backend を利用するための準備
-]
-]
-
-### JavaScript SDK のインポート
-* SDK がインポートされました
-
-.center[<img src="document-img/add_js_sdk_4.png" alt="add_js_sdk_4" width="700px">]
-
----
-.footnote_right[
-.right[
-ハンズオン<br>1.3. Monaca で mobile backend を利用するための準備
-]
-]
-
-### JavaScript SDK の初期化（APIキーの読み込み）
-* `index.html` にコーディングしていきます
-* <script></script>内に以下のコードを書きましょう
-	* applicationKeyとclientKeyのあとの`""`内には自分のAPIキーをしてください。
-
-```js
-// APIキー
-var applicationKey = "";
-var clientKey = "";
-```
-
-* APIキーは mobile backend 管理画面の「アプリ設定」で確認できます
-
-.center[<img src="document-img/confirm_apikey.png" alt="confirm_apikey" width="700px">]
-
----
-.footnote_right[
-.right[
-ハンズオン<br>1.3. Monaca で mobile backend を利用するための準備
-]
-]
-
-### JavaScript SDK の初期化（APIキーの読み込み）
-* APIキー を設定することで、SDK が初期化され利用可能になります
-  * `NCMB` は SDK を表しています
-
-```js
-// SDK初期化
-var ncmb = new NCMB(applicationKey, clientKey);
-
-```
-
-これで準備はすべて完了しました。
-
----
 
 # 早速アプリ開発をしていきましょう
 
@@ -171,19 +64,10 @@ var ncmb = new NCMB(applicationKey, clientKey);
 ]
 ]
 
-## 概要
-__問い合わせフォーム__ をイメージしたサンプルアプリを通して、クラウドデータベースへの保存と検索の方法を学んでいきます
-
-.center[<img src="document-img/app_image.png" alt="app_image.png" width="750px">]
-
----
-.footnote_right[
-はじめに
-]
 
 ## 今回習得できる内容
-### クラウドデータベースの基本的な使い方(すでに授業で学習済み)
-#### データの保存
+### クラウドデータベースの基本的な使い方
+#### データの保存(すでに授業で学習済み)
 
 .center[<img src="document-img/save_1.png" alt="save_1" width="450px">]
 
@@ -191,9 +75,10 @@ __問い合わせフォーム__ をイメージしたサンプルアプリを通
 .footnote_right[
 はじめに
 ]
+
 ## 今回習得できる内容
 ### クラウドデータベースの基本的な使い方
-#### データの取得
+#### データの取得(すでに授業で学習済み)
 
 .center[<img src="document-img/fetchAll_1.png" alt="fetchAll_1" width="450px">]
 
@@ -204,6 +89,8 @@ __問い合わせフォーム__ をイメージしたサンプルアプリを通
 ## 今回習得できる内容
 ### クラウドデータベースの基本的な使い方
 #### データの条件検索取得（完全一致検索・範囲指定検索）
+
+条件検索はすでに学習済みですが、今回はアプリから検索を行い、画面上に検索結果を表示させる方法を学びます
 
 .center[<img src="document-img/search_1.png" alt="search_1" width="650px">]
 
@@ -296,7 +183,7 @@ __問い合わせフォーム__ をイメージしたサンプルアプリを通
 
 .right-column[
 
-.size_large_18[ <br><a href="https://00m.in/2Yxdz" target="_blank">**https://00m.in/2Yxdz**</a> ]
+.size_large_18[ <br><a href="https://00m.in/nCrz3" target="_blank">**https://00m.in/nCrz3**</a> ]
 
 ]
 
@@ -419,7 +306,7 @@ __問い合わせフォーム__ をイメージしたサンプルアプリを通
 
 ### JavaScript SDK の初期化（APIキーの読み込み）
 * `js/mb.js` を開きます
-* `YOUR_NCMB_APPLICATION_KEY` と `YOUR_NCMB_CLIENT_KEY` を mobile backend でアプリ作成時に発行された２つの APIキー （アプリケーションキーとクライアントキー）に貼り替えます
+* mobile backend でアプリ作成時に発行された`APPLICATION KEY` と `CLIENTKEY` を 設定します
 
 ```js
 // APIキー
@@ -528,7 +415,7 @@ saveData: function(data) { // 引数： [name, emailAddress, age, prefecture, ti
 
 ### コード解説
 
-.center[<img src="document-img/imagecode.png" alt="confirm_apikey" width="700px">]
+.center[<img src="document-img/imagecode.png" alt="confirm_apikey" width="850px">]
 
 ---
 .footnote_right[
@@ -1146,99 +1033,11 @@ inquiry.set("emailAddress", "test@test.jp")
 ]
 ]
 
-### その他 mobile backend でできること
-#### データストアの機能
-* **ポインタ・リレーション**
-  * データ同士を関連付けすることができます
-* **参照権限（ACL）**
-  * データの読み書きを制限できます
 
-参考：[データストア \(Monaca\) : 基本的な使い方 \| ニフクラ mobile backend](http://mb.cloud.nifty.com/doc/current/datastore/basic_usage_monaca.html)
----
-.footnote_right[
-.right[
-まとめ
-]
-]
-
-## まとめ
-
-
-ニフクラ mobile backend クラウドデータベースの活用方法を学びました！
-
-.left-column[
-
-.size_large_11[
-* データの保存
-  * クラス作成
-  * `set()`
-  * `save()`
-* データの取得
-  * `order()`
-  * `fetchAll()`
-* データの条件検索
-  * `equalTo()`
-  * `greaterThanOrEqualTo()`
-  * `lessThan()`
-]
-]
-
-.right-column[
-.right[
-<br>
-今後のアプリ開発の<br>参考にしていただけたら幸いです！
-]
-
-<img src="document-img/takano.png" alt="takano.png" width="200px">
-
-.size_small_7[
-ニフクラ mobile backend イメージキャラクター<br>タカノくん
-]
-
----
-.footnote_right[
-.right[
-]
-]
-
-## データをクラウドに保存する<br>３つのメリット
-今回はクラウドのメリットを体験していただきました。
-
-.size_large_13[
-1. 保存した瞬間、瞬時にデータを共有できる
-1. 機種変更やアプリをアンインストールしても<br>データがなくならない
-1. アプリにデータを持たないのでアプリの容量を軽くできる
-1. どこからでもどの端末からでもアクセスできる
-]
-
-昨今、クラウドは多くの企業におけるデジタル変革の戦略に不可欠となっており
-クラウドを活用したさまざまなサービスも急速に発展しています。
-今後私たちの生活に欠かせない存在になると予想されるクラウドを
-少しでも理解した上で、日常生活でもクラウドを活用していただけたらと思います！
-
----
-.footnote_right[
-.right[
-]
-]
-
----
-layout: true
-class: center, middle, inverse_sub
----
-# おわりに
-
----
-layout: false
-
-.footnote_right[
-.right[
-おわりに
-]
-]
 
 ## おわりに
-使いやすくて便利な mobile backend をもっと活用してみたい方へ、mobile backendの各機能をすぐに試すことができるサンプルアプリを多数ご用意しています。Monacaにサンプルプロジェクトをインポートして、簡単な操作をするだけですぐにお試しいただけます！ぜひご活用ください。
+他にもmobile backendの各機能をすぐに試すことができるサンプルアプリを多数ご用意しています。
+Monacaにサンプルプロジェクトをインポートして、簡単な操作をするだけですぐにお試しいただけます！ぜひチーム開発の際にご活用ください。
 
 .size_large_11[
 * [mobile backend を体験しよう！](https://github.com/NIFTYCloud-mbaas/monaca_data_registration)
